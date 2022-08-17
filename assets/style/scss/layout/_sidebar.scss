@@ -1,0 +1,43 @@
+@import "../abstracts/colors";
+
+.app{
+    &--sidebar{
+        width: 260px;
+        background-color: $sidebar-bgc;
+        @include fixedSidebar();
+        
+        &__content{
+            padding: 16px;
+            h3,h6{
+                margin: 10px 0;    
+            }
+            h3{
+                font-size: 24px;
+            }
+            h6{
+                font-size: 16px;
+            }
+            hr{
+                border: 0;
+                border-top: 1px solid $input-color-gray;
+                margin: 20px 0;
+            }
+        }
+
+        &__links{
+            a{
+                width: 100%;
+                padding: 16px;
+                border: none;
+                outline: none;
+                display: block;
+                color: black;
+                transition: .1s linear;
+                &:hover{
+                    color: black;
+                    background-color: #ccc;
+                }
+            }
+        }
+    }
+}

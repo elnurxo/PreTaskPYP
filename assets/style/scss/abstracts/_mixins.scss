@@ -1,0 +1,6 @@
+@mixin fixedSidebar() {
+   position: fixed;
+   top: 0;
+   height: 100%;
+   overflow-y: scroll;
+  }

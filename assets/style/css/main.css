@@ -1,0 +1,128 @@
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6, p, label, input, a, button {
+  font-family: "Raleway";
+  font-weight: 400;
+}
+
+.btn {
+  color: #fff;
+  background-color: #4CAF50;
+  padding: 8px 16px;
+  border: none;
+  width: 100%;
+  margin: 15px 0;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+  text-align: left;
+}
+.btn i {
+  margin-right: 16px;
+}
+.btn:hover {
+  color: black;
+  background-color: #ccc;
+}
+
+.app--sidebar {
+  width: 260px;
+  background-color: #f1f1f1;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  overflow-y: scroll;
+}
+.app--sidebar__content {
+  padding: 16px;
+}
+.app--sidebar__content h3, .app--sidebar__content h6 {
+  margin: 10px 0;
+}
+.app--sidebar__content h3 {
+  font-size: 24px;
+}
+.app--sidebar__content h6 {
+  font-size: 16px;
+}
+.app--sidebar__content hr {
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
+}
+.app--sidebar__links a {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  outline: none;
+  display: block;
+  color: black;
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+}
+.app--sidebar__links a:hover {
+  color: black;
+  background-color: #ccc;
+}
+
+.app-sidebar__content__form label {
+  display: block;
+  margin: 15px 0;
+}
+.app-sidebar__content__form input {
+  border: 1px solid #ccc;
+  padding: 8px;
+  width: 100%;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.app--main {
+  margin-left: 260px;
+  padding: 0 16px;
+}
+.app--main__slides__title {
+  color: #4CAF50;
+  font-size: 30px;
+  padding: 10px 0;
+}
+.app--main__slides__cover {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+.app--main__slides__cover__image {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  margin-bottom: -6px;
+}
+.app--main__slides__cover__label {
+  color: white;
+  background-color: black;
+  padding: 0 16px;
+  position: absolute;
+  left: 0;
+  bottom: 7px;
+}
+.app--main__slides__cover__label__content {
+  margin: 15px 0;
+}
+
+body {
+  height: 300vh;
+}
+/*# sourceMappingURL=main.css.map */

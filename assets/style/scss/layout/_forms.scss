@@ -1,0 +1,13 @@
+@import "../abstracts/colors";
+
+.app-sidebar__content__form{
+    label{
+        display: block;
+        margin: 15px 0;
+    }
+    input{
+        border: 1px solid $form-input-border;
+        padding: 8px;
+        width: 100%;
+    }
+}
