@@ -6,6 +6,7 @@ footer{
     padding: 16px;
     a{
         text-decoration: underline;
+        color: black;
         &:hover{
             color: $footer-link-color;
         }

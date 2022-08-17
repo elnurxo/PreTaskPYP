@@ -142,6 +142,7 @@ footer {
 }
 footer a {
   text-decoration: underline;
+  color: black;
 }
 footer a:hover {
   color: #4CAF50;
@@ -239,9 +240,10 @@ footer a:hover {
 }
 .app--main__contact__info__title {
   font-size: 30px;
-  margin: 10px 0;
+  padding: 10px 0;
 }
 .app--main__contact__info__item i {
+  font-size: 14px;
   width: 30px;
 }
 .app--main__contact__info p {
