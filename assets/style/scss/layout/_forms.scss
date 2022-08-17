@@ -6,8 +6,16 @@
         margin: 15px 0;
     }
     input{
-        border: 1px solid $form-input-border;
-        padding: 8px;
-        width: 100%;
+        @include inputStyle($form-input-border);
+    }
+}
+.app--main__contact_form{
+    form{
+        p{
+            margin: 15px 0;
+        }
+        input{
+            @include inputStyle($form-input-border);    
+        }
     }
 }

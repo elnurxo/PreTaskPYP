@@ -66,10 +66,38 @@
             text-align: center;
           }
        }
-       hr{
-        border: 0;
-        border-top: 1px solid #eee;
-        margin: 20px 0;
+       .card,.subscribe{
+        margin: 15px 0;
+        &-links{
+            color: black;
+            i{
+                font-size: 18px;
+            }
        }
+      
+       }
+       hr{
+        @include hrStyle();
+       }
+    }
+    hr{
+        @include hrStyle();
+    }
+    &__contact{
+        padding: 0 16px;
+        &__info{
+           &__title{
+            font-size: 30px;
+            margin: 10px 0;
+           } 
+           &__item{
+            i{
+                width: 30px;
+            }
+           }
+           p{
+            margin: 15px 0;
+           }
+        }
     }
 }

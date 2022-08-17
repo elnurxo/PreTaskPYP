@@ -1,0 +1,13 @@
+@import "../abstracts/colors";
+
+footer{
+    margin-left: 260px;
+    margin-top: 32px;
+    padding: 16px;
+    a{
+        text-decoration: underline;
+        &:hover{
+            color: $footer-link-color;
+        }
+    }
+}

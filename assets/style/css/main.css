@@ -9,7 +9,7 @@
   line-height: 1.5;
 }
 
-h1, h2, h3, h4, h5, h6, p, label, input, a, button {
+h1, h2, h3, h4, h5, h6, p, label, input, a, button, span, footer {
   font-family: "Raleway";
   font-weight: 400;
 }
@@ -20,7 +20,6 @@ h1, h2, h3, h4, h5, h6, p, label, input, a, button {
   padding: 8px 16px;
   border: none;
   width: 100%;
-  margin: 15px 0;
   -webkit-transition: 0.1s linear;
   transition: 0.1s linear;
   text-align: left;
@@ -31,6 +30,18 @@ h1, h2, h3, h4, h5, h6, p, label, input, a, button {
 .btn:hover {
   color: black;
   background-color: #ccc;
+}
+
+.search-btn {
+  margin: 15px 0;
+}
+
+.subscribe-btn {
+  text-align: center;
+}
+
+.send-message-btn {
+  text-align: center;
 }
 
 .app--sidebar {
@@ -83,6 +94,15 @@ h1, h2, h3, h4, h5, h6, p, label, input, a, button {
   width: 100%;
 }
 
+.app--main__contact_form form p {
+  margin: 15px 0;
+}
+.app--main__contact_form form input {
+  border: 1px solid #ccc;
+  padding: 8px;
+  width: 100%;
+}
+
 .container {
   max-width: 980px;
   margin: 0 auto;
@@ -103,12 +123,28 @@ h1, h2, h3, h4, h5, h6, p, label, input, a, button {
   padding: 0 8px;
 }
 
+.col-4 {
+  width: 33.33333%;
+}
+
 .col-6 {
   width: 49.99999%;
 }
 
 .col-12 {
   width: 100%;
+}
+
+footer {
+  margin-left: 260px;
+  margin-top: 32px;
+  padding: 16px;
+}
+footer a {
+  text-decoration: underline;
+}
+footer a:hover {
+  color: #4CAF50;
 }
 
 .app--main {
@@ -179,9 +215,36 @@ h1, h2, h3, h4, h5, h6, p, label, input, a, button {
   width: 1.28571429em;
   text-align: center;
 }
+.app--main__info .card, .app--main__info .subscribe {
+  margin: 15px 0;
+}
+.app--main__info .card-links, .app--main__info .subscribe-links {
+  color: black;
+}
+.app--main__info .card-links i, .app--main__info .subscribe-links i {
+  font-size: 18px;
+}
 .app--main__info hr {
   border: 0;
   border-top: 1px solid #eee;
   margin: 20px 0;
+}
+.app--main hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+.app--main__contact {
+  padding: 0 16px;
+}
+.app--main__contact__info__title {
+  font-size: 30px;
+  margin: 10px 0;
+}
+.app--main__contact__info__item i {
+  width: 30px;
+}
+.app--main__contact__info p {
+  margin: 15px 0;
 }
 /*# sourceMappingURL=main.css.map */

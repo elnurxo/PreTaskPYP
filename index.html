@@ -51,7 +51,7 @@
                         <input required type="number" min="1" max="6" value="1" id="adult" name="adult">
                         <label for="kid"><i class="fa-solid fa-child-reaching"></i> Kids</label>
                         <input required type="number" min="1" max="6" value="0" id="kid" name="kid">
-                        <button class="btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search
+                        <button class="btn search-btn" type="submit"><i class="fa-solid fa-magnifying-glass"></i> Search
                             availability</button>
                     </form>
                 </div>
@@ -74,14 +74,15 @@
             <!-- SideBar/Menu End -->
 
             <!-- Main Content Start -->
-            <div class="app--main">
+            <main class="app--main">
                 <!-- Cover Image Start -->
                 <div class="app--main__item">
                     <h2 class="app--main__item__title">
                         The Apartment
                     </h2>
                     <div class="app--main__item__cover">
-                        <img class="app--main__item__cover__image" src="https://www.w3schools.com/w3images/livingroom.jpg" alt="living room">
+                        <img class="app--main__item__cover__image"
+                            src="https://www.w3schools.com/w3images/livingroom.jpg" alt="living room">
                         <div class="app--main__item__cover__label">
                             <p class="app--main__item__cover__label__content image-label">Living Room</p>
                         </div>
@@ -92,20 +93,25 @@
                 <!-- Room Images Start -->
                 <div class="row app--main__slides">
                     <div class="col-3 app--main__slides__item">
-                        <img class="slide-image active-image" data-label="Living Room" src="assets/media/home/livingroom.jpg" alt="slide 1">                 
+                        <img class="slide-image active-image" data-label="Living Room"
+                            src="assets/media/home/livingroom.jpg" alt="slide 1">
                     </div>
                     <div class="col-3 app--main__slides__item">
-                        <img class="slide-image non-active-image" data-label="Dining Room" src="assets/media/home/diningroom.jpg" alt="slide 2">                 
+                        <img class="slide-image non-active-image" data-label="Dining Room"
+                            src="assets/media/home/diningroom.jpg" alt="slide 2">
                     </div>
                     <div class="col-3 app--main__slides__item">
-                        <img class="slide-image non-active-image" data-label="Bedroom" src="assets/media/home/bedroom.jpg" alt="slide 3">                 
+                        <img class="slide-image non-active-image" data-label="Bedroom"
+                            src="assets/media/home/bedroom.jpg" alt="slide 3">
                     </div>
                     <div class="col-3 app--main__slides__item">
-                        <img class="slide-image non-active-image" data-label="Living Room II" src="assets/media/home/livingroom2.jpg" alt="slide 4">                 
+                        <img class="slide-image non-active-image" data-label="Living Room II"
+                            src="assets/media/home/livingroom2.jpg" alt="slide 4">
                     </div>
                 </div>
                 <!-- Room Images End -->
 
+                <!-- Info Section Start -->
                 <div class="app--main__info">
                     <div class="space">
                         <h4 class="app--main__info__title">The space</h4>
@@ -160,10 +166,77 @@
                         </div>
                         <hr>
                     </div>
-                    
+                    <div class="extra-info">
+                        <h4 class="app--main__info__title">Extra Info</h4>
+                        <p>Our apartment is really clean and we like to keep it that way. Enjoy the lorem ipsum dolor
+                            sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                            aliquip ex ea commodo consequat. </p>
+                        <p class="card">We accept:
+                            <a class="card-links" href="#"><i class="fa-regular fa-credit-card"></i></a>
+                            <a class="card-links" href="#"> <i class="fa-brands fa-cc-mastercard"></i></a>
+                            <a class="card-links" href="#"><i class="fa-brands fa-cc-amex"></i></a>
+                            <a class="card-links" href="#"><i class="fa-brands fa-cc-paypal"></i></a>
+                        </p>
+                        <hr>
+                    </div>
+                    <div class="rules">
+                        <h4 class="app--main__info__title">Rules</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p class="subscribe">Subscribe to receive updates on available dates and special offers.</p>
+                        <div class="col-4">
+                            <button class="btn subscribe-btn" type="button">Subscribe</button>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <hr>
+                <!-- Info Section End -->
+
+                <!-- Contact Section Start -->
+                <div class="app--main__contact">
+                    <div class="app--main__contact__info">
+                        <h2 class="app--main__contact__info__title">Contact</h2>
+                        <div class="app--main__contact__info__item">
+                            <i class="fa-solid fa-location-dot"></i> <span>Chicago, US</span>
+                        </div>
+                        <div class="app--main__contact__info__item">
+                            <i class="fa-solid fa-phone"></i> <span>Phone: +00 151515</span>
+                        </div>
+                        <div class="app--main__contact__info__item">
+                            <i class="fa-solid fa-envelope"></i> <span>Email: mail@mail.com</span>
+                        </div>
+                        <p>Questions? Go ahead, ask them: </p>
+                    </div>
+                    <div class="app--main__contact_form">
+                        <form action="">
+                            <p>
+                                <input type="text" placeholder="Name" name="name" required>
+                            </p>
+                            <p>
+                                <input type="email" placeholder="Email" name="email" required>
+                            </p>
+                            <p>
+                                <input type="text" placeholder="Message" name="message" required>
+                            </p>
+                           <div class="col-4">
+                            <button class="btn send-message-btn" type="submit">Send a Message</button>
+                           </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- Contact Section End -->
+
+            </main>
             <!-- Main Content End -->
+
+            <!-- Footer Start -->
+            <footer>
+                Powered by <a href="#">elnurxo</a>
+            </footer>
+            <!-- Footer End -->
+
 
         </div>
     </div>
