@@ -75,22 +75,100 @@
 
             <!-- Main Content Start -->
             <div class="app--main">
-                <div class="app--main__slides">
-                    <h2 class="app--main__slides__title">
+                <!-- Cover Image Start -->
+                <div class="app--main__item">
+                    <h2 class="app--main__item__title">
                         The Apartment
                     </h2>
-                    <div class="app--main__slides__cover">
-                        <img class="app--main__slides__cover__image" src="https://www.w3schools.com/w3images/livingroom.jpg" alt="living room">
-                        <div class="app--main__slides__cover__label">
-                            <p class="app--main__slides__cover__label__content image-label">Living Room 2</p>
+                    <div class="app--main__item__cover">
+                        <img class="app--main__item__cover__image" src="https://www.w3schools.com/w3images/livingroom.jpg" alt="living room">
+                        <div class="app--main__item__cover__label">
+                            <p class="app--main__item__cover__label__content image-label">Living Room</p>
                         </div>
                     </div>
+                </div>
+                <!-- Cover Image End -->
+
+                <!-- Room Images Start -->
+                <div class="row app--main__slides">
+                    <div class="col-3 app--main__slides__item">
+                        <img class="slide-image active-image" data-label="Living Room" src="assets/media/home/livingroom.jpg" alt="slide 1">                 
+                    </div>
+                    <div class="col-3 app--main__slides__item">
+                        <img class="slide-image non-active-image" data-label="Dining Room" src="assets/media/home/diningroom.jpg" alt="slide 2">                 
+                    </div>
+                    <div class="col-3 app--main__slides__item">
+                        <img class="slide-image non-active-image" data-label="Bedroom" src="assets/media/home/bedroom.jpg" alt="slide 3">                 
+                    </div>
+                    <div class="col-3 app--main__slides__item">
+                        <img class="slide-image non-active-image" data-label="Living Room II" src="assets/media/home/livingroom2.jpg" alt="slide 4">                 
+                    </div>
+                </div>
+                <!-- Room Images End -->
+
+                <div class="app--main__info">
+                    <div class="space">
+                        <h4 class="app--main__info__title">The space</h4>
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="app--main__info__link">
+                                    <i class="fa-solid fa-person"></i> Max people: 4
+                                </p>
+                                <p class="app--main__info__link">
+                                    <i class="fa-solid fa-bath"></i> Bathrooms: 2
+                                </p>
+                                <p class="app--main__info__link">
+                                    <i class="fa-solid fa-bed"></i> Bedrooms: 1
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <p class="app--main__info__link">
+                                    <i class="fa-regular fa-clock"></i> Check In: After 3PM
+                                </p>
+                                <p class="app--main__info__link">
+                                    <i class="fa-regular fa-clock"></i> Check Out: 12PM
+                                </p>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <div class="amenities">
+                        <h4 class="app--main__info__title">Amenities</h4>
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="app--main__info__link">
+                                    <i class="fa-solid fa-shower"></i> Shower
+                                </p>
+                                <p class="app--main__info__link">
+                                    <i class="fa-solid fa-wifi"></i> Wifi
+                                </p>
+                                <p class="app--main__info__link">
+                                    <i class="fa-solid fa-tv"></i> TV
+                                </p>
+                            </div>
+                            <div class="col-6">
+                                <p class="app--main__info__link">
+                                    <i class="fa-solid fa-utensils"></i> Kitchen
+                                </p>
+                                <p class="app--main__info__link">
+                                    <i class="fa-solid fa-temperature-three-quarters"></i> Heating
+                                </p>
+                                <p class="app--main__info__link">
+                                    <i class="fa-solid fa-wheelchair"></i> Accessible
+                                </p>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    
                 </div>
             </div>
             <!-- Main Content End -->
 
         </div>
     </div>
+
+    <script src="assets/js/app.js"></script>
 </body>
 
 </html>

@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6, p, label, input, a, button {
 }
 .app--sidebar__content hr {
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #eee;
   margin: 20px 0;
 }
 .app--sidebar__links a {
@@ -90,27 +90,50 @@ h1, h2, h3, h4, h5, h6, p, label, input, a, button {
   border-right: 1px solid #ccc;
 }
 
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.col-3 {
+  width: 24.99999%;
+  padding: 0 8px;
+}
+
+.col-6 {
+  width: 49.99999%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
 .app--main {
   margin-left: 260px;
+}
+.app--main__item {
   padding: 0 16px;
 }
-.app--main__slides__title {
+.app--main__item__title {
   color: #4CAF50;
   font-size: 30px;
   padding: 10px 0;
 }
-.app--main__slides__cover {
+.app--main__item__cover {
   position: relative;
   overflow: hidden;
   height: 100%;
 }
-.app--main__slides__cover__image {
+.app--main__item__cover__image {
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
   margin-bottom: -6px;
 }
-.app--main__slides__cover__label {
+.app--main__item__cover__label {
   color: white;
   background-color: black;
   padding: 0 16px;
@@ -118,11 +141,47 @@ h1, h2, h3, h4, h5, h6, p, label, input, a, button {
   left: 0;
   bottom: 7px;
 }
-.app--main__slides__cover__label__content {
+.app--main__item__cover__label__content {
   margin: 15px 0;
 }
-
-body {
-  height: 300vh;
+.app--main__slides {
+  padding: 0 8px;
+  margin: 10px 0;
+}
+.app--main__slides__item .slide-image {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -o-object-fit: contain;
+     object-fit: contain;
+  opacity: 0.6;
+}
+.app--main__slides__item .slide-image:hover {
+  opacity: 1;
+}
+.app--main__slides__item .active-image {
+  opacity: 1;
+}
+.app--main__info {
+  padding: 0 16px;
+}
+.app--main__info__title {
+  font-size: 20px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+.app--main__info__link {
+  margin: 18px 0;
+  font-size: 18px;
+}
+.app--main__info__link i {
+  font-size: 18px;
+  width: 1.28571429em;
+  text-align: center;
+}
+.app--main__info hr {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
 }
 /*# sourceMappingURL=main.css.map */

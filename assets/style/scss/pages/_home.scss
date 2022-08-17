@@ -2,8 +2,8 @@
 
 .app--main{
     margin-left: 260px;
-    padding: 0 16px;
-    &__slides{
+    &__item{
+        padding: 0 16px;
         &__title{
             color: $title-color-green;
             font-size: 30px;
@@ -30,5 +30,46 @@
                 }
             }
         }
+    }
+    &__slides {
+      padding: 0 8px;
+      margin: 10px 0;
+
+      &__item {
+          .slide-image {
+              width: 100%;
+              box-sizing: border-box;
+              object-fit: contain;
+              opacity: 0.6;
+              &:hover{
+                opacity: 1;
+              }
+          }
+          .active-image{
+            opacity: 1;
+          }
+      }
+    }
+    &__info{
+       padding: 0 16px;
+       &__title{
+         font-size: 20px;
+         font-weight: 600;
+         padding: 10px 0;
+       } 
+       &__link{
+          margin: 18px 0;
+          font-size: 18px;
+          i{
+            font-size: 18px;
+            width: 1.28571429em;
+            text-align: center;
+          }
+       }
+       hr{
+        border: 0;
+        border-top: 1px solid #eee;
+        margin: 20px 0;
+       }
     }
 }
