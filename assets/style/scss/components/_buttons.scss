@@ -5,7 +5,6 @@
     background-color: $btn-bgc-green;
     padding: 8px 16px;
     border: none;
-    width: 100%;
     transition: .1s linear;
     text-align: left;
     i{
@@ -18,10 +17,17 @@
 }
 .search-btn{
     margin: 15px 0;
+    width: 100%;
 }
 .subscribe-btn{
     text-align: center;
+    width: 100%;
 }
 .send-message-btn{
     text-align: center;
+    width: 100%;
+}
+.subscribe-modal-btn{
+    padding: 12px 24px;
+    margin-bottom: 16px;
 }

@@ -19,7 +19,6 @@ h1, h2, h3, h4, h5, h6, p, label, input, a, button, span, footer {
   background-color: #4CAF50;
   padding: 8px 16px;
   border: none;
-  width: 100%;
   -webkit-transition: 0.1s linear;
   transition: 0.1s linear;
   text-align: left;
@@ -34,14 +33,22 @@ h1, h2, h3, h4, h5, h6, p, label, input, a, button, span, footer {
 
 .search-btn {
   margin: 15px 0;
+  width: 100%;
 }
 
 .subscribe-btn {
   text-align: center;
+  width: 100%;
 }
 
 .send-message-btn {
   text-align: center;
+  width: 100%;
+}
+
+.subscribe-modal-btn {
+  padding: 12px 24px;
+  margin-bottom: 16px;
 }
 
 .app--sidebar {
@@ -146,6 +153,50 @@ footer a {
 }
 footer a:hover {
   color: #4CAF50;
+}
+
+.app--modal {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.app--modal__item {
+  -webkit-transform: scale(0.01);
+          transform: scale(0.01);
+  width: 900px;
+  background-color: #fff;
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+  padding: 12px 40px;
+}
+.app--modal__item__title {
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 4px;
+  margin: 10px 0;
+}
+.app--modal__item .remove {
+  float: right;
+  font-size: 24px;
+  padding: 8px 16px;
+}
+.app--modal__item .remove:hover {
+  background-color: #ccc;
+}
+.app--modal__item p {
+  margin: 15px 0;
+}
+.app--modal__item p input {
+  border: 1px solid #ccc;
+  padding: 8px;
+  width: 100%;
 }
 
 .app--main {
