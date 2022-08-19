@@ -1,0 +1,29 @@
+.app--header{
+    display: none;
+    align-items: center;
+    background-color: black;
+    color: white;
+    position: fixed;
+    justify-content: space-between;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    &__logo{
+        padding: 8px 16px;
+        font-size: 24px;
+    }
+    &__hamburger{
+        padding: 8px 16px;
+        i{
+            font-size: 24px;
+            color: white;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 992px) {
+    .app--header{
+        display: flex;
+    }
+}

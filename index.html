@@ -38,6 +38,7 @@
             <nav class="app--sidebar">
                 <!-- Sidebar Form Start -->
                 <div class="app--sidebar__content">
+                    <i class="fa-solid fa-xmark close-sidebar"></i>
                     <h3>Rental</h3>
                     <h3>from $99</h3>
                     <h6>per night</h6>
@@ -73,6 +74,19 @@
             </nav>
             <!-- SideBar/Menu End -->
 
+            <!-- Navbar Start  -->
+            <header class="app--header">
+                <span class="app--header__logo">Rental</span>
+                <a class="app--header__hamburger" href="#">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </header>
+            <!-- Navbar End -->
+
+            <!-- Overlay Start -->
+            <div class="app--overlay"></div>
+            <!-- Overlay End -->
+
             <!-- Main Content Start -->
             <main class="app--main">
                 <!-- Cover Image Start -->
@@ -82,7 +96,7 @@
                     </h2>
                     <div class="app--main__item__cover">
                         <img class="app--main__item__cover__image"
-                            src="https://www.w3schools.com/w3images/livingroom.jpg" alt="living room">
+                            src="assets/media/home/livingroom.jpg" alt="living room">
                         <div class="app--main__item__cover__label">
                             <p class="app--main__item__cover__label__content image-label">Living Room</p>
                         </div>
@@ -186,7 +200,7 @@
                             labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
                             laboris nisi ut aliquip ex ea commodo consequat.</p>
                         <p class="subscribe">Subscribe to receive updates on available dates and special offers.</p>
-                        <div class="col-4">
+                        <div class="col-4 col-md-12">
                             <button class="btn subscribe-btn" type="button">Subscribe</button>
                         </div>
                     </div>
@@ -220,7 +234,7 @@
                             <p>
                                 <input type="text" placeholder="Message" name="message" required>
                             </p>
-                           <div class="col-4">
+                           <div class="col-4 col-md-12">
                             <button class="btn send-message-btn" type="submit">Send a Message</button>
                            </div>
                         </form>
