@@ -8,7 +8,10 @@ app.listen(port,()=>{
     console.log('Listening to '+port);
 });
 
+app.use(express.static(__dirname + '/public'));
+
 app.get('/', function(request, response){
+    response.sendFile('C:/Users/LENOVO/Desktop/PreTaskPYP node/assets/style/css/main.css');
     response.sendFile('C:/Users/LENOVO/Desktop/PreTaskPYP node/views/index.html');
 });
 
