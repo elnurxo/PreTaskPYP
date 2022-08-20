@@ -1,10 +1,15 @@
 const express = require('express');
 const app = express();
+var http = require('http').Server(app);
 
 const port = process.env.port || 3000;
 
 app.listen(port,()=>{
     console.log('Listening to '+port);
+});
+
+app.get('/', function(request, response){
+    response.sendFile('C:/Users/LENOVO/Desktop/PreTaskPYP node/views/index.html');
 });
 
 // app.set('view engine', 'ejs');
