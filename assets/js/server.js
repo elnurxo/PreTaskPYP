@@ -1,11 +1,11 @@
-// const express = require('express');
-// const app = express();
+const express = require('express');
+const app = express();
 
-// const port = process.env.port || 3000;
+const port = process.env.port || 3000;
 
-// app.listen(port,()=>{
-//     console.log('Listening to '+port);
-// });
+app.listen(port,()=>{
+    console.log('Listening to '+port);
+});
 
 // app.set('view engine', 'ejs');
 
