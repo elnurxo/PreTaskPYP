@@ -1,25 +1,25 @@
-const express = require('express');
-const app = express();
+// const express = require('express');
+// const app = express();
 
-const port = process.env.port || 3000;
+// const port = process.env.port || 3000;
 
-app.listen(port,()=>{
-    console.log('Listening to '+port);
-});
+// app.listen(port,()=>{
+//     console.log('Listening to '+port);
+// });
 
-app.set('view engine', 'ejs');
+// app.set('view engine', 'ejs');
 
-app.get('/',(req,res)=>{
-    res.render('index',{text:'World'});
-});
-app.get('/users',(req,res)=>{
-    let users = ["Elnur","Ali","Cavid"];
+// app.get('/',(req,res)=>{
+//     res.render('index',{text:'World'});
+// });
+// app.get('/users',(req,res)=>{
+//     let users = ["Elnur","Ali","Cavid"];
 
-    res.send(users);
-});
-app.post("/create-user",(req,res)=>{
-    console.log(req);
-});
+//     res.send(users);
+// });
+// app.post("/create-user",(req,res)=>{
+//     console.log(req);
+// });
 
 
 
