@@ -1,21 +1,27 @@
 const express = require('express');
 const app = express();
 var http = require('http').Server(app);
-
 const port = process.env.port || 3000;
 
 app.listen(port,()=>{
     console.log('Listening to '+port);
 });
 
-app.use(express.static(__dirname + '/public'));
+//Static Files
+app.use('/assets',express.static('assets'));
+app.use('/style/css',express.static(__dirname + '/assets/style/css'));
+app.use('/js',express.static(__dirname + 'assets/js'));
+app.use('/media/home',express.static(__dirname + 'assets/media/home'));
+app.use('/media/favicon',express.static(__dirname + 'assets/media/favicon'));
+
+//Set Views
+app.set('views','./views');
+app.set('view engine', 'ejs')
 
 app.get('/', function(request, response){
-    response.sendFile('C:/Users/LENOVO/Desktop/PreTaskPYP node/assets/style/css/main.css');
-    response.sendFile('C:/Users/LENOVO/Desktop/PreTaskPYP node/views/index.html');
+    response.render('index',{text: 'this is ejs'});
 });
-
-// app.set('view engine', 'ejs');
+ 
 
 // app.get('/',(req,res)=>{
 //     res.render('index',{text:'World'});
