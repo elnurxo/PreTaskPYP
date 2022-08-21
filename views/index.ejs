@@ -95,10 +95,10 @@
                         The Apartment
                     </h2>
                     <div class="app--main__item__cover">
-                        <img class="app--main__item__cover__image"
-                            src="../assets/media/home/livingroom.jpg" alt="living room">
+                        <img class="app--main__item__cover__image" src="<%=apartment.apartmentrooms[0].path%> "
+                            alt="living room">
                         <div class="app--main__item__cover__label">
-                            <p class="app--main__item__cover__label__content image-label">Living Room</p>
+                            <p class="app--main__item__cover__label__content image-label"><%=apartment.apartmentrooms[0].label%></p>
                         </div>
                     </div>
                 </div>
@@ -106,22 +106,12 @@
 
                 <!-- Room Images Start -->
                 <div class="row app--main__slides">
-                    <div class="col-3 app--main__slides__item">
-                        <img class="slide-image active-image" data-label="Living Room"
-                            src="../assets/media/home/livingroom.jpg" alt="slide 1">
-                    </div>
-                    <div class="col-3 app--main__slides__item">
-                        <img class="slide-image non-active-image" data-label="Dining Room"
-                            src="../assets/media/home/diningroom.jpg" alt="slide 2">
-                    </div>
-                    <div class="col-3 app--main__slides__item">
-                        <img class="slide-image non-active-image" data-label="Bedroom"
-                            src="../assets/media/home/bedroom.jpg" alt="slide 3">
-                    </div>
-                    <div class="col-3 app--main__slides__item">
-                        <img class="slide-image non-active-image" data-label="Living Room II"
-                            src="../assets/media/home/livingroom2.jpg" alt="slide 4">
-                    </div>
+                    <% apartment.apartmentrooms.forEach((room,index)=> {%>
+                        <div class="col-3 app--main__slides__item">
+                            <img class="slide-image <%= index==0?" active-image":"" %> " data-label="<%=room.label %>"
+                                src="<%=room.path%> " alt="slide <%=index+1%> ">
+                        </div>
+                        <% });%>
                 </div>
                 <!-- Room Images End -->
 
@@ -132,21 +122,21 @@
                         <div class="row">
                             <div class="col-6">
                                 <p class="app--main__info__link">
-                                    <i class="fa-solid fa-person"></i> Max people: 4
+                                    <i class="fa-solid fa-person"></i> Max people: <%= apartment.maxPeople %>
                                 </p>
                                 <p class="app--main__info__link">
-                                    <i class="fa-solid fa-bath"></i> Bathrooms: 2
+                                    <i class="fa-solid fa-bath"></i> Bathrooms: <%= apartment.bathroom %>
                                 </p>
                                 <p class="app--main__info__link">
-                                    <i class="fa-solid fa-bed"></i> Bedrooms: 1
+                                    <i class="fa-solid fa-bed"></i> Bedrooms: <%= apartment.bedroom %>
                                 </p>
                             </div>
                             <div class="col-6">
                                 <p class="app--main__info__link">
-                                    <i class="fa-regular fa-clock"></i> Check In: After 3PM
+                                    <i class="fa-regular fa-clock"></i> Check In: After <%= apartment.checkIn %>
                                 </p>
                                 <p class="app--main__info__link">
-                                    <i class="fa-regular fa-clock"></i> Check Out: 12PM
+                                    <i class="fa-regular fa-clock"></i> Check Out: <%= apartment.checkOut %>
                                 </p>
                             </div>
                         </div>
@@ -156,49 +146,43 @@
                         <h4 class="app--main__info__title">Amenities</h4>
                         <div class="row">
                             <div class="col-6">
-                                <p class="app--main__info__link">
-                                    <i class="fa-solid fa-shower"></i> Shower
-                                </p>
-                                <p class="app--main__info__link">
-                                    <i class="fa-solid fa-wifi"></i> Wifi
-                                </p>
-                                <p class="app--main__info__link">
-                                    <i class="fa-solid fa-tv"></i> TV
-                                </p>
+                                <% amenity.forEach((item,index)=> {%>
+                                    <% if(index<3) {%>
+                                        <p class="app--main__info__link">
+                                            <i class="fa-solid <%= item.icon%> "></i>
+                                            <%=item.title%>
+                                                <%=(index+1)%3 %>
+                                        </p>
+                                        <% }%>
+                                            <% });%>
                             </div>
                             <div class="col-6">
-                                <p class="app--main__info__link">
-                                    <i class="fa-solid fa-utensils"></i> Kitchen
-                                </p>
-                                <p class="app--main__info__link">
-                                    <i class="fa-solid fa-temperature-three-quarters"></i> Heating
-                                </p>
-                                <p class="app--main__info__link">
-                                    <i class="fa-solid fa-wheelchair"></i> Accessible
-                                </p>
+                                <% amenity.forEach((item,index)=> {%>
+                                    <% if(index>=3) {%>
+                                        <p class="app--main__info__link">
+                                            <i class="fa-solid <%=item.icon  %> "></i>
+                                            <%=item.title%>
+                                                <%=(index+1)%3 %>
+                                        </p>
+                                        <% }%>
+                                            <% });%>
                             </div>
                         </div>
                         <hr>
                     </div>
                     <div class="extra-info">
                         <h4 class="app--main__info__title">Extra Info</h4>
-                        <p>Our apartment is really clean and we like to keep it that way. Enjoy the lorem ipsum dolor
-                            sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                            aliquip ex ea commodo consequat. </p>
+                        <p><%= info.desc  %> </p>
                         <p class="card">We accept:
-                            <a class="card-links" href="#"><i class="fa-regular fa-credit-card"></i></a>
-                            <a class="card-links" href="#"> <i class="fa-brands fa-cc-mastercard"></i></a>
-                            <a class="card-links" href="#"><i class="fa-brands fa-cc-amex"></i></a>
-                            <a class="card-links" href="#"><i class="fa-brands fa-cc-paypal"></i></a>
+                            <% info.cards.forEach((card,index)=> {%>
+                                <a class="card-links" href="#"><i class="<%= card.cardIcon %> "></i></a>
+                                <% });%>
                         </p>
                         <hr>
                     </div>
                     <div class="rules">
                         <h4 class="app--main__info__title">Rules</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                            laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        <p><%=rules.desc %> </p>
                         <p class="subscribe">Subscribe to receive updates on available dates and special offers.</p>
                         <div class="col-4 col-md-12">
                             <button class="btn subscribe-btn" type="button">Subscribe</button>
@@ -212,16 +196,15 @@
                 <div class="app--main__contact">
                     <div class="app--main__contact__info">
                         <h2 class="app--main__contact__info__title">Contact</h2>
-                        <div class="app--main__contact__info__item">
-                            <i class="fa-solid fa-location-dot"></i> <span>Chicago, US</span>
-                        </div>
-                        <div class="app--main__contact__info__item">
-                            <i class="fa-solid fa-phone"></i> <span>Phone: +00 151515</span>
-                        </div>
-                        <div class="app--main__contact__info__item">
-                            <i class="fa-solid fa-envelope"></i> <span>Email: mail@mail.com</span>
-                        </div>
-                        <p>Questions? Go ahead, ask them: </p>
+                        <% setting.forEach((item,index)=> {%>
+                            <div class="app--main__contact__info__item">
+                                <i class="fa-solid <%=item.key==" location"?"fa-location-dot":item.key=="phone"
+                                    ?"fa-phone":"fa-envelope"%> "></i> <span>
+                                    <%= item.value%>
+                                </span>
+                            </div>
+                            <% });%>
+                                <p>Questions? Go ahead, ask them: </p>
                     </div>
                     <div class="app--main__contact_form">
                         <form action="">
@@ -234,9 +217,9 @@
                             <p>
                                 <input type="text" placeholder="Message" name="message" required>
                             </p>
-                           <div class="col-4 col-md-12">
-                            <button class="btn send-message-btn" type="submit">Send a Message</button>
-                           </div>
+                            <div class="col-4 col-md-12">
+                                <button class="btn send-message-btn" type="submit">Send a Message</button>
+                            </div>
                         </form>
                     </div>
                 </div>

@@ -1,0 +1,102 @@
+{
+    "apartment": [
+        {
+            "maxPeople": 4,
+            "bathroom": 2,
+            "bedroom": 1,
+            "checkIn": "3PM",
+            "checkOut": "12PM",
+            "apartmentrooms": [
+                {
+                    "id": 1,
+                    "path" : "../assets/media/home/livingroom.jpg",
+                    "label" : "Living Room"
+                },
+                {
+                    "id": 2,
+                    "path" : "../assets/media/home/diningroom.jpg",
+                    "label" : "Dining Room"
+                },
+                {
+                    "id": 3,
+                    "path" : "../assets/media/home/bedroom.jpg",
+                    "label" : "Bedroom"
+                },
+                {
+                    "id": 4,
+                    "path" : "../assets/media/home/livingroom2.jpg",
+                    "label" : "Living Room II"
+                }
+            ]
+        }
+    ],
+    "settings": [
+        {
+            "key":"location",
+            "value":"Chicago, US"
+        },
+        {
+            "key":"phone",
+            "value":"+00 151515"
+        },
+        {
+            "key":"email",
+            "value":"mail@mail.com"
+        }
+    ],
+    "amenities": [
+        {
+            "icon": "fa-shower",
+            "title": "Shower"
+        },
+        {
+            "icon": "fa-wifi",
+            "title": "Wifi"
+        },
+        {
+            "icon": "fa-tv",
+            "title": "TV"
+        },
+        {
+            "icon": "fa-utensils",
+            "title": "Kitchen"
+        },
+        {
+            "icon": "fa-temperature-three-quarters",
+            "title": "Heating"
+        },
+        {
+            "icon": "fa-wheelchair",
+            "title": "Accessible"
+        }
+    ],
+    "extrainfo":[
+        {
+            "desc":"Our apartment is really clean and we like to keep it that way. Enjoy the lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+            "cards":[
+                {
+                    "cardName": "Credit Card",
+                    "cardIcon": "fa-regular fa-credit-card"
+                },
+                {
+                    "cardName": "Master Card",
+                    "cardIcon": "fa-brands fa-cc-mastercard"
+                },
+                {
+                    "cardName": "American Express",
+                    "cardIcon": "fa-brands fa-cc-amex"
+                },
+                {
+                    "cardName": "PayPal",
+                    "cardIcon": "fa-brands fa-cc-paypal"
+                }
+            ]
+        }
+
+    ],
+    "rules":[
+        {
+            "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        }
+    ]
+  }

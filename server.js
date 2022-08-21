@@ -7,10 +7,6 @@ app.use(cors());
 
 const url = 'http://localhost:3000/';
 
-axios(url).then(response=>{
-    const html = response.data;
-});
-
 app.listen(port,()=>{
     console.log('Listening to '+port);
 });
@@ -26,6 +22,58 @@ app.use('/media/favicon',express.static(__dirname + 'assets/media/favicon'));
 app.set('views','./views');
 app.set('view engine', 'ejs')
 
+//get json data async Apartment
+async function getApartments(){
+    const res = await axios.get('http://localhost:3001/apartment');
+    return res.data;
+}
+let apartments = getApartments();
+let apartment;
+apartments.then((value)=>{
+    apartment = value;
+});
+//get json data async Settings
+async function getSettings(){
+    const res = await axios.get('http://localhost:3001/settings');
+    return res.data;
+}
+let settings = getSettings();
+let setting;
+settings.then((value)=>{
+    setting = value;
+});
+//get json data async Amenities
+async function getAmenities(){
+    const res = await axios.get('http://localhost:3001/amenities');
+    return res.data;
+}
+let amenities = getAmenities();
+let amenity;
+amenities.then((value)=>{
+    amenity = value;
+});
+//get json data async ExtraInfo
+async function getExtraInfo(){
+    const res = await axios.get('http://localhost:3001/extrainfo');
+    return res.data;
+}
+let extrainfo = getExtraInfo();
+let info;
+extrainfo.then((value)=>{
+    info = value;
+});
+//get json data async Rules
+async function getRules(){
+    const res = await axios.get('http://localhost:3001/rules');
+    return res.data;
+}
+let rules = getRules();
+let rule;
+rules.then((value)=>{
+    rule = value;
+    console.log(rule[0].desc);
+});
+
 app.get('/', function(request, response){
-    response.render('index');
+    response.render('index', {apartment: apartment[0],setting: setting,amenity: amenity,info:info[0],rules:rule[0]});
 });
