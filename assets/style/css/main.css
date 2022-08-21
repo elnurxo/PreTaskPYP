@@ -191,7 +191,6 @@ footer a:hover {
 .app--modal__item {
   -webkit-transform: scale(0.01);
           transform: scale(0.01);
-  width: 900px;
   background-color: #fff;
   position: relative;
   margin: 0 auto;
@@ -221,6 +220,27 @@ footer a:hover {
   width: 100%;
 }
 
+@media only screen and (min-width: 993px) {
+  .app--modal__item {
+    width: 900px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .app--modal__item {
+    width: 600px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .app--modal__item {
+    width: 500px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .app--modal__item {
+    width: auto !important;
+    margin: 0 10px;
+  }
+}
 .app--header {
   display: none;
   -webkit-box-align: center;
