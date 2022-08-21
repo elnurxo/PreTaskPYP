@@ -19,9 +19,24 @@ app.set('views','./views');
 app.set('view engine', 'ejs')
 
 app.get('/', function(request, response){
-    response.render('index',{text: 'this is ejs'});
+    response.render('index');
 });
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // app.get('/',(req,res)=>{
 //     res.render('index',{text:'World'});
