@@ -5,7 +5,7 @@ const port = process.env.PORT || 3000;
 const cors = require('cors');
 app.use(cors());
 
-const url = 'http://localhost:3000/';
+const url = 'http://pyppretask.herokuapp.com/';
 
 app.listen(port,()=>{
     console.log('Listening to '+port);
@@ -71,7 +71,6 @@ let rules = getRules();
 let rule;
 rules.then((value)=>{
     rule = value;
-    console.log(rule[0].desc);
 });
 
 app.get('/', function(request, response){
